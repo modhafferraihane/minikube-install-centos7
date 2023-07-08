@@ -1,0 +1,31 @@
+hostnamectl set-hostname minikube-master
+sudo yum update -y
+
+install docker
+--------------------
+sudo systemctl daemon-reload
+sudo chmod 777 /var/run/docker.sock
+---------------------------------------------------------
+##kubectl install
+----------------------------------
+curl -LO https://dl.k8s.io/release/v1.27.3/bin/linux/amd64/kubectl
+sudo chmod +x ./kubectl
+sudo mv kubectl /usr/local/bin/
+----------------------------------------------
+##Minikube install
+----------------------------------------------
+sudo yum install conntrack -y
+sudo yum install wget -y
+sudo wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo chmod +x minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+minikube start 
+
+kubectl get nodes
+minikube status
+
+
+
+
+
+
