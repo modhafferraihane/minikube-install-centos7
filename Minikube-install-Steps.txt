@@ -24,7 +24,14 @@ minikube start
 kubectl get nodes
 minikube status
 
-
+-----------------------------------------------
+Kubectl autocomplete:
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-autocomplete
+-----------------------------------------------
+source <(kubectl completion bash) 
+echo "source <(kubectl completion bash)" >> ~/.bashrc
+alias k=kubectl
+complete -o default -F __start_kubectl k
 
 
 
