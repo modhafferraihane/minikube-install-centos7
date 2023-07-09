@@ -7,17 +7,6 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "shell", inline: <<-SHELL
-    # Ajout du repository Docker
-    sudo yum install -y yum-utils device-mapper-persistent-data lvm2
-    sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-
-    # Installation de Docker
-    sudo yum install -y docker-ce docker-ce-cli containerd.io
-
-    # Activation de Docker au démarrage
-    sudo systemctl enable docker
-
-    # Démarrage du service Docker
-    sudo systemctl start docker
+    
   SHELL
 end
