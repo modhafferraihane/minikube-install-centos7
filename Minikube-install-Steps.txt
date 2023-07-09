@@ -29,10 +29,13 @@ minikube status
 Kubectl autocomplete:
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-autocomplete
 -----------------------------------------------
-source <(kubectl completion bash) 
+
 echo "source <(kubectl completion bash)" >> ~/.bashrc
-alias k=kubectl
-complete -o default -F __start_kubectl k
+echo 'alias k=kubectl' >>~/.bashrc
+echo 'complete -o default -F __start_kubectl k' >>~/.bashrc
+
+
+
 
 
 
